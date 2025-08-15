@@ -70,3 +70,4 @@ const meny = [
     kategori: "Hovedrett",
   },
 ];
+export { meny };
