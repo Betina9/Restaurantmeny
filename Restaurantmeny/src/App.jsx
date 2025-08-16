@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import { meny } from './data/meny.js';
+import { meny } from './data/meny';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,7 +15,7 @@ function App() {
   /</div>
       )
     }
-
+return <Menu items={meny} />
     <>
       <h1>Restaurant meny</h1>
       
