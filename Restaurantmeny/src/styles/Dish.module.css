@@ -1,0 +1,75 @@
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: var(--shadow);
+  transition: transform 0.12s ease, box-shadow 0.12s ease,
+    border-color 0.12s ease;
+}
+.card:hover,
+.card:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.12);
+  border-color: #d1d5db;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.price {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.ingredients {
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 6px 0 12px;
+}
+
+.category {
+  display: inline-block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-weight: 600;
+  border: 1px solid #e5e7eb;
+  background: #f3f4f6; /* lys, nøytral fallback */
+  color: #111827; /* mørk tekst = god lesbarhet */
+}
+
+/* HOVEDRETT – myk grønn */
+.category[data-category="Hovedrett"] {
+  background: #dcfce7; /* lys grønn */
+  border-color: #b7f7cd;
+  background-color: #14532d; /* mørk grønn tekst */
+}
+
+/* FORRETT – myk blå */
+.category[data-category="Forrett"] {
+  background: #e0edff; /* lys blå */
+  border-color: #c7dbff;
+  background-color: #1e3a8a; /* mørk blå tekst */
+}
+
+/* DESSERT – myk rosa */
+.category[data-category="Dessert"] {
+  background: #fde7f2; /* lys rosa */
+  border-color: #f9cfe4;
+  background-color: #9d174d; /* mørk rosa tekst */
+}

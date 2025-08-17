@@ -4,3 +4,23 @@
   gap: 16px;
   align-items: start;
 }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  align-items: start;
+  margin-top: 8px;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  align-items: center;
+  margin: 8px 0 16px;
+}
+
+.counter {
+  color: var(--muted);
+  font-size: 0.95rem;
+}

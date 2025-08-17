@@ -9,7 +9,9 @@ function Dish({ data }) {
         <span className={styles.price}>{pris}</span>
       </header>
       <p className="styles.ingredients">{ingredienser}</p>
-      <small className={styles.category}>{kategori}</small>
+      <small className={styles.category} data-category={kategori}>
+        {kategori}
+      </small>
     </article>
   );
 }
