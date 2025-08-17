@@ -1,23 +1,14 @@
 import { useState } from "react";
 import "./App.css";
-import { meny } from './data/meny';
+import { meny } from "./data/meny";
+import Menu from "./components/Menu";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    function Menu({ items}) {
-      return (
-      <div className={styles.grid}>
-        {items.map((rett) => (
-          <Dish key={rett.id} data={rett} />
-  ))}
-  /</div>
-      )
-    }
-return <Menu items={meny} />
-    <>
+    <main>
       <h1>Restaurant meny</h1>
-      
-
+      <Menu items={meny} />
+    </main>
+  );
+}
 export default App;
