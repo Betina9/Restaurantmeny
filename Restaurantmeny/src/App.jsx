@@ -1,14 +1,16 @@
-import { useState } from "react";
-import "./App.css";
+import "./index.css";
 import { meny } from "./data/meny";
 import Menu from "./components/Menu";
 
 function App() {
   return (
     <main>
-      <h1>Restaurant meny</h1>
+      <header style={{ marginBottom: 16 }}>
+        <h1>Restaurant meny</h1>
+      </header>
       <Menu items={meny} />
     </main>
   );
 }
+
 export default App;

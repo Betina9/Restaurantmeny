@@ -1,26 +1,51 @@
-.grid {
+.columns {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 16px;
-  align-items: start;
-}
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 16px;
-  align-items: start;
-  margin-top: 8px;
+  grid-template-columns: repeat(3, 1fr); /* ← 3 kolonner */
+  gap: 32px;
+  margin-top: 2rem;
+  padding: 0 2rem;
 }
 
-.toolbar {
+.kategoriKolonne {
+  background-color: rgba(255, 255, 255, 0.06); /* svak hvit for lysere kort */
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px); /* gjør kortet lettere å lese */
+}
+
+.kategoriTittel {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: white;
+}
+
+.liste {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px 12px;
-  align-items: center;
-  margin: 8px 0 16px;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.counter {
-  color: var(--muted);
-  font-size: 0.95rem;
+.menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+/* For nettbrett */
+@media (max-width: 900px) {
+  .menu {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* For mobil */
+@media (max-width: 600px) {
+  .menu {
+    grid-template-columns: 1fr;
+  }
 }
