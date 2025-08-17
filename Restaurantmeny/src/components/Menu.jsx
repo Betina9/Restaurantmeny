@@ -1,4 +1,5 @@
 import styles from "../styles/Menu.module.css";
+import Dish from "./Dish.jsx";
 
 function Menu({ items }) {
   return (
@@ -9,3 +10,4 @@ function Menu({ items }) {
     </div>
   );
 }
+export default Menu;

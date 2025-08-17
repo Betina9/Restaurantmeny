@@ -1,7 +1,7 @@
 import styles from "../styles/Dish.module.css";
 
 function Dish({ data }) {
-  const { tittelen, pris, ingredienser, kateogri } = data;
+  const { tittel, pris, ingredienser, kategori } = data; // ← hent ut feltene
   return (
     <article className={styles.dish}>
       <header className="styles.header">
@@ -13,3 +13,5 @@ function Dish({ data }) {
     </article>
   );
 }
+
+export default Dish;
